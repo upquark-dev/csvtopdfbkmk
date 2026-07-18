@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BOOKMARKS>
+    <ITEM NAME="第一章 概率论的基本概念" PAGE="13" FITETYPE="Fit" INDENT="0">
+        <ITEM NAME="§1 随机试验" PAGE="13" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§2 样本空间、随机事件" PAGE="14" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§3 频率与概率" PAGE="17" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§4 等可能模型(古典概型)" PAGE="21" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§5 条件概率" PAGE="26" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§6 独立性" PAGE="32" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="小结" PAGE="35" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="习题" PAGE="36" FITETYPE="Fit" INDENT="1"/>
+    </ITEM>
+    <ITEM NAME="第二章 随机变量及其分布" PAGE="42" FITETYPE="Fit" INDENT="0">
+        <ITEM NAME="§1 随机变量" PAGE="42" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§2 离散型随机变量及其分布律" PAGE="44" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§3 随机变量的分布函数" PAGE="50" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§4 连续型随机变量及其概率密度" PAGE="54" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§5 随机变量的函数的分布" PAGE="62" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="小结" PAGE="66" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="习题" PAGE="67" FITETYPE="Fit" INDENT="1"/>
+    </ITEM>
+    <ITEM NAME="第三章 多维随机变量及其分布" PAGE="72" FITETYPE="Fit" INDENT="0">
+        <ITEM NAME="§1 二维随机变量" PAGE="72" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§2 边缘分布" PAGE="76" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§3 条件分布" PAGE="79" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§4 相互独立的随机变量" PAGE="84" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§5 两个随机变量的函数的分布" PAGE="88" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="小结" PAGE="95" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="习题" PAGE="96" FITETYPE="Fit" INDENT="1"/>
+    </ITEM>
+    <ITEM NAME="第四章 随机变量的数字特征" PAGE="102" FITETYPE="Fit" INDENT="0">
+        <ITEM NAME="§1 数学期望" PAGE="102" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§2 方差" PAGE="112" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§3 协方差及相关系数" PAGE="118" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="§4 矩、协方差矩阵" PAGE="122" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="小结" PAGE="124" FITETYPE="Fit" INDENT="1"/>
+        <ITEM NAME="习题" PAGE="125" FITETYPE="Fit" INDENT="1"/>
+    </ITEM>
+</BOOKMARKS>

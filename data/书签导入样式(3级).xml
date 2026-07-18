@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BOOKMARKS>
+    <ITEM NAME="版权声明" PAGE="2" FITETYPE="Fit"  INDENT="0"/>
+    <ITEM NAME="前言" PAGE="6" FITETYPE="Fit"  INDENT="0"/>
+    <ITEM NAME="致谢" PAGE="8" FITETYPE="Fit"  INDENT="0"/>
+    <ITEM NAME="第一部分 基础知识" PAGE="15" FITETYPE="Fit"  INDENT="0">
+        <ITEM NAME="第1章 起步" PAGE="16" FITETYPE="Fit"  INDENT="1">
+            <ITEM NAME="1.1 搭建编程环境" PAGE="17" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="1.2 在不同操作系统中搭建Python编程环境" PAGE="19" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="1.3 运行HelloWorld程序" PAGE="24" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="1.4 解决安装问题" PAGE="26" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="1.5 从终端运行Python程序" PAGE="27" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="1.6 小结" PAGE="29" FITETYPE="Fit"  INDENT="2"/>
+        </ITEM>
+        <ITEM NAME="第2章 变量和简单数据类型" PAGE="30" FITETYPE="Fit"  INDENT="1">
+            <ITEM NAME="2.1 运行hello_world.py时发生的情况" PAGE="31" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="2.2 变量" PAGE="32" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="2.3 字符串" PAGE="35" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="2.4 数" PAGE="42" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="2.5 注释" PAGE="46" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="2.6 Python之禅" PAGE="48" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="2.7 小结" PAGE="50" FITETYPE="Fit"  INDENT="2"/>
+        </ITEM>
+    </ITEM>
+    <ITEM NAME="第二部分 项目" PAGE="260" FITETYPE="Fit"  INDENT="0">
+        <ITEM NAME="第12章 武装飞船" PAGE="262" FITETYPE="Fit"  INDENT="1">
+            <ITEM NAME="12.3 开始游戏项目" PAGE="265" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="12.4 添加飞船图像" PAGE="269" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="12.5 重构：方法_check_events()和__update_screen()" PAGE="273" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="12.9 小结" PAGE="292" FITETYPE="Fit"  INDENT="2"/>
+        </ITEM>
+        <ITEM NAME="第20章 设置应用程序的样式并部署" PAGE="489" FITETYPE="Fit"  INDENT="1">
+            <ITEM NAME="20.1 设置项目“学习笔记”的样式" PAGE="490" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="20.2 部署“学习笔记”" PAGE="501" FITETYPE="Fit"  INDENT="2"/>
+            <ITEM NAME="20.3 小结" PAGE="518" FITETYPE="Fit"  INDENT="2"/>
+        </ITEM>
+    </ITEM>
+</BOOKMARKS>
