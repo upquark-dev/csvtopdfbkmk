@@ -23,6 +23,10 @@ class App:
         self._build_ui()
 
     def _build_ui(self):
+        style = ttk.Style()
+        style.configure("TButton", font=("Microsoft YaHei", 9))
+        style.configure("TRadiobutton", font=("Microsoft YaHei", 9))
+
         main = ttk.Frame(self.window, padding=16)
         main.pack(fill=tk.BOTH, expand=True)
 
@@ -34,8 +38,12 @@ class App:
 
         row1 = ttk.Frame(file_frame)
         row1.pack(fill=tk.X)
-        self.entry = ttk.Entry(row1, textvariable=self.csv_path, state="readonly")
+        self.entry = ttk.Entry(
+            row1, textvariable=self.csv_path, state="readonly")
         self.entry.pack(side=tk.LEFT, fill=tk.X, expand=True)
+        ttk.Button(row1, text="导入文件样式", command=self._export_template).pack(
+            side=tk.RIGHT, padx=(8, 0)
+        )
         ttk.Button(row1, text="浏览...", command=self._browse).pack(
             side=tk.RIGHT, padx=(8, 0)
         )
@@ -46,9 +54,7 @@ class App:
 
         btn_frame = ttk.Frame(main)
         btn_frame.pack(fill=tk.X, pady=(0, 12))
-        ttk.Button(btn_frame, text="生成导出 XML", command=self._export).pack(
-            side=tk.LEFT
-        )
+        ttk.Button(btn_frame, text="生成并导出XML文件", command=self._export).pack()
 
         status_frame = ttk.LabelFrame(main, text="状态信息", padding=8)
         status_frame.pack(fill=tk.BOTH, expand=True)
@@ -58,7 +64,7 @@ class App:
             wrap=tk.WORD,
             height=8,
             state="disabled",
-            font=("Consolas", 10),
+            font=("Microsoft YaHei", 10),
         )
         self.status_text.pack(fill=tk.BOTH, expand=True)
         self._append_status("就绪，请选择 CSV 文件")
@@ -102,6 +108,73 @@ class App:
         self._rebuild_rows_buttons(0)
         self._append_status(f"已选择文件: {path}")
         self._validate()
+
+    def _export_template(self):
+        FORMAT_INFO = """\
+CSV 文件格式说明
+================
+
+字段（3列，必须包含）：
+    级别\t- 正整数（1=最高级）
+    标题\t- 书签显示文字
+    页码\t- PDF 物理页码（第一页为 1）
+
+示例：
+    级别,标题,页码
+    1,第一部分 基础知识,15
+    2,第1章 起步,16
+    3,第2章 变量和简单数据类型,30
+
+规则：
+    · 首行必须为：级别,标题,页码
+    · 级别、页码必须为正整数
+    · 页码为 PDF 中的物理页码
+    · 编码：UTF-8
+    · 按文档顺序排列"""
+        win = tk.Toplevel(self.window)
+        win.title("CSV 文件格式说明")
+        win.geometry("520x420")
+        win.resizable(False, False)
+        win.transient(self.window)
+        win.grab_set()
+
+        btn_frame = tk.Frame(win)
+        btn_frame.pack(fill=tk.X, pady=(12, 0))
+
+        text = tk.Text(win, wrap=tk.WORD, font=(
+            "Microsoft YaHei", 10), padx=12, pady=12)
+        text.pack(fill=tk.BOTH, expand=True, padx=12, pady=(0, 12))
+        text.insert("1.0", FORMAT_INFO)
+        text.configure(state="disabled")
+
+        def do_download():
+            save_path = filedialog.asksaveasfilename(
+                title="保存 CSV 样式文件",
+                defaultextension=".csv",
+                initialfile="bookmarks_样式.csv",
+                filetypes=[("CSV 文件", "*.csv")],
+            )
+            if not save_path:
+                return
+            try:
+                content = "级别,标题,页码\n1,第一部分 基础知识,15\n2,第1章 起步,16\n3,1.1 搭建编程环境,17\n4,1.1.1 Python版本,17\n"
+                with open(save_path, "w", encoding="utf-8-sig", newline="") as f:
+                    f.write(content)
+                self._append_status(f"✓ 样式文件已下载：{save_path}")
+                win.destroy()
+            except Exception as e:
+                messagebox.showerror("下载失败", str(e))
+
+        btn = tk.Button(
+            btn_frame,
+            text="CSV样式下载",
+            command=do_download,
+            width=20,
+            height=1,
+            cursor="hand2",
+            font=("Microsoft YaHei", 9),
+        )
+        btn.pack(pady=8)
 
     def _validate(self):
         path = self.csv_path.get()
