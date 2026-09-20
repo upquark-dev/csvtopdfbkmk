@@ -5,3 +5,6 @@ __pycache__/
 *.pdf
 *.sublime-workspace
 *.sublime-project
+dist/
+*.exe
+.workbuddy/
