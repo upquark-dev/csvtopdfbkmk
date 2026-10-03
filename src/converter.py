@@ -3,7 +3,7 @@ import os
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
-REQUIRED_FIELDS = {"级别", "标题", "页码"}
+REQUIRED_FIELDS = {"级别", "标题", "物理页码"}
 
 
 class ValidationError(Exception):
@@ -36,13 +36,13 @@ def validate_csv(csv_path):
             for i, row in enumerate(rows, start=2):
                 level_val = row.get("级别", "").strip()
                 title_val = row.get("标题", "").strip()
-                page_val = row.get("页码", "").strip()
+                page_val = row.get("物理页码", "").strip()
                 if not level_val:
                     raise ValidationError(f"第 {i} 行「级别」为空")
                 if not title_val:
                     raise ValidationError(f"第 {i} 行「标题」为空")
                 if not page_val:
-                    raise ValidationError(f"第 {i} 行「页码」为空")
+                    raise ValidationError(f"第 {i} 行「物理页码」为空")
                 try:
                     level_num = int(level_val)
                     if level_num < 1:
@@ -54,7 +54,7 @@ def validate_csv(csv_path):
                     if page_num < 1:
                         raise ValueError
                 except ValueError:
-                    raise ValidationError(f"第 {i} 行「页码」值无效: {page_val}")
+                    raise ValidationError(f"第 {i} 行「物理页码」值无效: {page_val}")
     except ValidationError:
         raise
     except Exception as e:
@@ -70,7 +70,7 @@ def build_bookmark_tree(rows):
     for row in rows:
         level = int(row["级别"])
         title = row["标题"].strip()
-        page = int(row["页码"])
+        page = int(row["物理页码"])
         node = BookmarkNode(title, page, level)
         while stack and stack[-1].level >= level:
             stack.pop()
