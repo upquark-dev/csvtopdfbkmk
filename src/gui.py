@@ -3,13 +3,14 @@ from tkinter import filedialog, messagebox, ttk
 import os
 import threading
 
+from src import __version__
 from src.converter import validate_csv, csv_to_bookmark_xml, ValidationError
 
 
 class App:
     def __init__(self):
         self.window = tk.Tk()
-        self.window.title("CSV 转福昕书签 XML")
+        self.window.title(f"CSV 转福昕书签 XML v{__version__}")
         self.window.geometry("640x480")
         self.window.minsize(560, 400)
 
@@ -30,7 +31,9 @@ class App:
         main = ttk.Frame(self.window, padding=16)
         main.pack(fill=tk.BOTH, expand=True)
 
-        title = ttk.Label(main, text="CSV 转福昕书签 XML", font=("", 16, "bold"))
+        title = ttk.Label(
+            main, text=f"CSV 转福昕书签 XML  v{__version__}", font=("", 16, "bold")
+        )
         title.pack(anchor=tk.W, pady=(0, 16))
 
         file_frame = ttk.LabelFrame(main, text="选择 CSV 文件", padding=8)
@@ -67,7 +70,7 @@ class App:
             font=("Microsoft YaHei", 10),
         )
         self.status_text.pack(fill=tk.BOTH, expand=True)
-        self._append_status("就绪，请选择 CSV 文件")
+        self._append_status(f"就绪，请选择 CSV 文件（v{__version__}）")
 
     def _rebuild_rows_buttons(self, max_level):
         for btn in self.rows_buttons:
